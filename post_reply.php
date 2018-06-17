@@ -12,7 +12,7 @@ include_once("create_topic_parse.php");
 <html lang="en" dir="ltr">
 <head>
   <meta charset="utf-8">
-  <title>create topic</title>
+  <title>Post Reply</title>
   <link href="css/style.css"rel="stylesheet" type="text/css">
 </head>
 <body>
@@ -26,16 +26,6 @@ include_once("create_topic_parse.php");
     <br>
     <hr />
     <div id="content">
-      <form action="create_topic_parse.php" method="post">
-        <p>Topic Title</p>
-        <input type="text" name="topic_title" size="98" maxlength="200" />
-        <p>Topic Content</p>
-        <textarea name="topic_content" rows="5" cols="75"></textarea>
-        <br>
-        <br>
-        <input type="hidden" name="cid" value="<?php echo $cid; ?>" />
-        <input type="submit" name="topic_submit" value="Create Your Topic" />
-      </form>
 
     </div>
   </div>

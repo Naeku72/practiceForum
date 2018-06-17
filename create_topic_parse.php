@@ -5,7 +5,7 @@ if ($_SESSION['uid'] == ""){
   exit();
 }
 if (isset($_POST['topic_submit'])){
-  if(($_POST['topic_title'] == "") && ($_POST['topic_content'] == "")){
+  if(($_POST['topic_title'] == "") && ($_POST['topic_content'] == "")) {
     echo "You did not fill in both fields. Please return to previous page";
     exit();
   } else{
@@ -28,5 +28,4 @@ if (isset($_POST['topic_submit'])){
     }
   }
 }
-
  ?>

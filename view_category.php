@@ -1,3 +1,4 @@
+
 <?php session_start (); ?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
@@ -35,15 +36,15 @@ if (isset($_SESSION['uid'])){
   $logged = "| <a href='index.php?cid=".$cid."'>Please log in to create topics in this forum.";
 }
 $sql = "SELECT id FROM categories WHERE id='".$cid."' LIMIT 1";
-$res = mysqli_query($con, $sql) or die(mysqli_error());
+$res = mysqli_query($con, $sql) or die(mysqli_error() );
 if (mysqli_num_rows($res) == 1){
   $sql2 = "SELECT * FROM topics WHERE category_id='".$cid."' ORDER BY topic_reply_date DESC";
-  $res2 = mysqli_query($con, $sql2) or die(mysqli_error());
+  $res2 = mysqli_query($con, $sql2) or die(mysqli_error() );
 
   if (mysqli_num_rows($res2) > 0) {
     $topics .= "<table width='100%' style='border-collapse: collapse;'>";
     $topics .= "<tr><td colspan='3'><a href='index.php'>Return To Forum Index</a>".$logged."<hr /></td></tr>";
-    $topics .= "<tr style='background-coloc: #dddddd;'><td>Topic Title</td><td width='65' align='center'>Replies</td><td width='65' align='center'>Views></td></tr>";
+    $topics .= "<tr style='background-color: #dddddd;'><td>Topic Title</td><td width='65' align='center'>Replies</td><td width='65' align='center'>Views></td></tr>";
     $topics .= "<tr><td colspan='3'><hr /></td></tr>";
 
     while ($row = mysqli_fetch_assoc($res2)){

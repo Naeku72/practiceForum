@@ -18,7 +18,7 @@
       <input type='submit' name='submit' value='Log In' />";
     }
     else {
-      echo "<p>You are logged in as".$_SESSION['username']." &bull; <a href='logout_parse.php'>Logout</a>";
+      echo "<p>You are logged in as ".$_SESSION['username']." &bull; <a href='logout_parse.php'>Logout</a>";
     }
     ?>
   </div>

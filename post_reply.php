@@ -5,8 +5,10 @@ if ((!isset($_SESSION['uid'])) || ($_GET['cid'] == "")){
   exit();
 }
 $cid = $_GET['cid'];
+$tid = $_GET['tid'];
 include_once("connect.php");
-include_once("create_topic_parse.php");
+
+
 ?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
@@ -26,7 +28,15 @@ include_once("create_topic_parse.php");
     <br>
     <hr />
     <div id="content">
+      <form action="post_reply_parse.php" method="post">
+        <p>Post Reply</p>
+        <textarea name="reply_content" rows="5" cols="75"></textarea>
+        <br>
+        <input type="hidden" name="cid" value="<?php echo $cid; ?>" />
+        <input type="hidden" name="tid" value="<?php echo $tid; ?>" />
+        <input type="submit" name="reply_submit" value="Post Your Reply" />
 
+      </form>
     </div>
   </div>
 

@@ -19,3 +19,6 @@ a {
 .cat_links:hover {
 	background-color: #dddddd;
 }
+.types{
+  display: block;
+}

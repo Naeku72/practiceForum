@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <title>Home Page</title>
-  <link href="css/style.css"rel="stylesheet" type="text/css">
+  <link href="css/style.css" rel="stylesheet" type="text/css">
 </head>
 <body>
   <div id="wrapper">

@@ -5,6 +5,7 @@
 }
 a {
 	color: $0000ff;
+  display: inline-block;
 }
 .cat_links{
 	display: block;

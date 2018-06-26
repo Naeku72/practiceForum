@@ -1,0 +1,86 @@
+body p{
+
+}
+
+#footer{
+  background-color: #F15A29;
+  margin-bottom: 0px;
+}
+.smalls{
+  text-align: center;
+}
+.types a:link {
+    color: #20608e;
+    background-color: transparent;
+    text-decoration: none;
+    display: block;
+}
+
+.types a:visited {
+    color: #20608e;
+    background-color: transparent;
+    text-decoration: none;
+}
+
+.types a:hover {
+    color: red;
+    background-color: transparent;
+    text-decoration: none;
+}
+.but1{
+  color: white;
+  background-color: #F15A29;
+  border-radius: 5px;
+  border-right-style: solid;
+  border-bottom-style: solid;
+  border-color: #F15A29;
+  width: 250px;
+  height: 50px;
+  font-size: 1rem;
+  font-weight: 100;
+}
+.types {
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+#home{
+  margin-left: 10%;
+  color: black;
+  font-size: 20px;
+}
+#headings{
+  margin-left: 30%;
+  color: #20608e;
+  font-size: 20px;
+}
+#navbarNav li{
+  display: inline;
+  color: white;
+
+}
+#navbarNav a:visited {
+    color: white;
+    background-color: transparent;
+    text-decoration: none;
+    display: inline;
+}
+#navbarNav a:link {
+    color: white;
+    background-color: transparent;
+    text-decoration: none;
+    display: inline;
+}
+#navbarNav a:hover {
+    color: SlateBlue;
+    background-color: transparent;
+    text-decoration: none;
+}
+header{
+  background-color: #F15A29;
+  height: 100px;
+  width: 100%;
+  padding-top: 20px;
+  font-size: 1.5rem;
+  padding-left: 60%;
+
+}

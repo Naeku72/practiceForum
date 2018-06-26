@@ -5,7 +5,7 @@
 <head>
   <meta charset="utf-8">
   <title>View Category</title>
-  <link href="css/style.css"rel="stylesheet" type="text/css">
+  <link href="css/style.css" rel="stylesheet" type="text/css">
 </head>
 <body>
   <div id="wrapper">
@@ -44,7 +44,7 @@ if (mysqli_num_rows($res) == 1){
   if (mysqli_num_rows($res2) > 0) {
     $topics .= "<table width='100%' style='border-collapse: collapse;'>";
     $topics .= "<tr><td colspan='3'><a href='index.php'>Return To Forum Index</a>".$logged."<hr /></td></tr>";
-    $topics .= "<tr style='background-color: #dddddd;'><td>Topic Title</td><td width='65' align='center'>Replies</td><td width='65' align='center'>Views></td></tr>";
+    $topics .= "<tr style='background-color: #dddddd;'><td>Topic Title</td><td width='65' align='center'>Replies</td><td width='65' align='center'>Views</td></tr>";
     $topics .= "<tr><td colspan='3'><hr /></td></tr>";
 
     while ($row = mysqli_fetch_assoc($res2)){

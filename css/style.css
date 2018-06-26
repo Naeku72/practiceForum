@@ -20,13 +20,10 @@ a {
 .cat_links:hover {
 	background-color: #dddddd;
 }
-#litlinks{
-  display: inline-block;
-}
-#footer{
-  background-color: #F15A29;
+/* #footer{
+  background-color: orange;
   margin-bottom: 0px;
 }
 .smalls{
   text-align: center;
-}
+} */

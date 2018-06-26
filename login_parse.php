@@ -18,7 +18,7 @@ if(isset($_POST['username'])){
   else{
     echo "Invalid Login credentials, Please return to log in page and try again &bull; <a href='index.php'>LogIn</a>";
     exit();
-  }
+  } 
 }
 
  ?>

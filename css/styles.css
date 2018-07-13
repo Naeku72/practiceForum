@@ -1,10 +1,11 @@
-body p{
-
+body{
+  background-image: url(../img/bg.jpg);
+  width: 90%;
 }
-
 #footer{
-  background-color: #F15A29;
+  background-color: black;
   margin-bottom: 0px;
+  width: 100%;
 }
 .smalls{
   text-align: center;
@@ -29,24 +30,37 @@ body p{
 }
 .but1{
   color: white;
-  background-color: #F15A29;
+  background-color: #229A05;
   border-radius: 5px;
   border-right-style: solid;
   border-bottom-style: solid;
-  border-color: #F15A29;
+  border-color: #229A05;
   width: 250px;
   height: 50px;
   font-size: 1rem;
   font-weight: 100;
 }
+.but1:hover{
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
 .types {
   font-size: 1.5rem;
   font-weight: 400;
 }
+.box{
+  border: 3px solid grey;
+  border-style: solid;
+  border-radius: 25px;
+  margin-top: 30px;
+  margin-left: 200px;
+  margin-right: 200px;
+  padding-bottom: 5px;
+  background-color: white;
+}
 #home{
   margin-left: 10%;
   color: black;
-  font-size: 20px;
+  font-size: 15px;
 }
 #headings{
   margin-left: 30%;
@@ -71,12 +85,12 @@ body p{
     display: inline;
 }
 #navbarNav a:hover {
-    color: SlateBlue;
+    color: #229A05;
     background-color: transparent;
     text-decoration: none;
 }
 header{
-  background-color: #F15A29;
+  background-color: black;
   height: 100px;
   width: 100%;
   padding-top: 20px;

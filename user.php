@@ -1,54 +1,36 @@
-<?php
-  session_start();
-  require("connect.php");
-  require("head.php")
-  ?>
+<?php require("head.php") ?>
 
         <!--Panel 1-->
         <div class="tab-pane fade active show" id="panel83" role="tabpanel">
 
           <div id="content">
-
-
-
-            <?php
-            if ((!isset($_SESSION['uid'])) || ($_GET['cid'] == "")){
-              header("Location: login.php");
-              exit();
-            }
-            $cid = $_GET['cid'];
-            include_once("connect.php");
-            include_once("create_topic_parse.php");
-
-
-            ?>
-
-            <body>
-              <div id="wrapper">
-                <?php
-                echo "<p>You are logged in as " .$_SESSION['username']." ";
-                ?>
-                <br>
-                <hr />
-                <div id="content">
-                  <form action="create_topic_parse.php" method="post">
-                    <p>Topic Title</p>
-                    <input type="text" name="topic_title" size="70" maxlength="70" />
-                    <p>Topic Content</p>
-                    <textarea name="topic_content" rows="5" cols="75"></textarea>
-                    <br>
-                    <br>
-                    <input type="hidden" name="cid" value="<?php echo $cid; ?>" />
-                    <input type="submit" name="topic_submit" value="Create Your Topic" />
-                  </form>
-
-                </div>
+            <p style="color: black; font-size: 1rem;">Below is a list of some categories we have where our members are able to discuss issues related to breast cancer</p>
+          <?php
+          include_once("connect.php");
+          $sql = "SELECT * FROM categories ORDER BY category_title ASC";
+          $res = mysqli_query($con, $sql) or die(mysqli_error());
+          $categories = "";
+          if (mysqli_num_rows($res) > 0) {
+          	while ($row = mysqli_fetch_assoc($res)){
+          		$id = $row['id'];
+          		$title = $row['category_title'];
+          		$description = $row['category_description'];
+          		$categories .= "
+              <div class='row'>
+              <div class='card col-md-10'>
+              <br>
+                <a href='view_category.php?cid=".$id."'>".$title."
+                </a><br>
+                <p>$description</p>
               </div>
+                            </div><br><br>";
+          	}
+          	echo $categories;
+          } else {
+          	echo "<p>There are no categories available yet</p>";
+          }
 
-
-            </body>
-            </html>
-
+          ?>
           </div>
 
         </div>
@@ -70,7 +52,6 @@
                                 <!--Name-->
                                 <div class="text-center">
                                   <?php
-
                                   if( isset($_SESSION['uid']) )
                                   {
                                     $sel = mysqli_query($con, "SELECT * FROM users WHERE id = $_SESSION[uid]
@@ -90,11 +71,11 @@
                                 </div>
 
                                 <ul class="striped list-unstyled">
-                                    <li><strong>Username:</strong><?php echo $uname;   ?></li>
+                                    <li><strong>Username: </strong><?php echo $uname;   ?></li>
 
-                                    <li><strong>E-mail address:</strong><?php echo $uemail;   ?> </li>
+                                    <li><strong>E-mail address: </strong><?php echo $uemail;   ?> </li>
 
-                                    <li><strong>Phone number:</strong> <?php echo $uphone;   ?></li>
+                                    <li><strong>Phone number: </strong> <?php echo $uphone;   ?></li>
 
 
 

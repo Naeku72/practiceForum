@@ -1,8 +1,6 @@
-<<?php
-session_start();
-if ($_SESSION['uid']){
-  if (isset($_POST['reply_submit'])){
-    include_once("connect.php");
+<?php
+require("connect.php");
+
     $creator = $_SESSION['uid'];
     $cid = $_POST['cid'];
     $tid = $_POST['tid'];
@@ -15,15 +13,20 @@ if ($_SESSION['uid']){
     $res3 = mysqli_query($con, $sql3) or die(mysqli_error($con));
 
     if(($res) && ($res2) && ($res3)) {
-      echo "<p>Your reply has been successfully posted. <a href='view_topic.php?cid=".$cid."&tid=".$tid."'>Click here to return to the topic</a></p>";
+      echo "
+      <br>
+      <div class='row'>
+        <div class='card col-md-11'><br>
+        $reply_content <br>
+        <br>
+        Your reply has been successfully posted. <br >
+      </div>
+      </div>";
+      ?>
+      <?php
     } else {
       echo "<p>There was a problem posting your reply, Plase try again</p>";
     }
-  } else {
-    exit();
-  }
-} else {
-  exit();
-}
 
- ?>>
+
+ ?>

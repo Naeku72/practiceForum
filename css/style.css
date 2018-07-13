@@ -4,7 +4,7 @@
   margin-right: auto;
 }
 a {
-	color: $0000ff;
+	color: #191970;
   display: inline-block;
 }
 .cat_links{
@@ -20,10 +20,3 @@ a {
 .cat_links:hover {
 	background-color: #dddddd;
 }
-/* #footer{
-  background-color: orange;
-  margin-bottom: 0px;
-}
-.smalls{
-  text-align: center;
-} */

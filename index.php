@@ -7,17 +7,13 @@
   <link href="css/style.css" rel="stylesheet" type="text/css">
 </head>
 <body>
-  <div id="wrapper">
-    <h2>Support Breast Cancer</h2>
-    <h3>Welcome to Breast Cancer Support Forum</h3>
-    <form action="index.html" method="get">
       <button type="submit">Home</button>
     </form>
     <br>
 <?php session_start (); ?>
     <?php
     if (!isset($_SESSION['uid'])){
-      echo "<form action='login_parse.php' method='post'>
+      echo "<form action='login.php' method='post'>
       Username: <input type='text' name='username' />&nbsp;
       Password: <input type='password' name='password' />&nbsp;
       <input type='submit' name='submit' value='Log In' />";

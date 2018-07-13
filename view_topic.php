@@ -26,7 +26,7 @@
                     <div style='min-height: 125px;'>".$row['topic_title']."<br />by".$row2['post_creator']." - ".$row2['post_date']."<hr />".$row2['post_content']."
                     </div>
                     </td>
-                    
+
                     </tr>
                     <tr>
                     <td colspan='2'><hr /><td>

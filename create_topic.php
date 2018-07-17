@@ -29,7 +29,7 @@
                 echo "<p>You are logged in as " .$_SESSION['username']." ";
                 ?>
                 <br>
-                <hr />
+
                 <div id="content">
                   <form action="create_topic_parse.php" method="post">
                     <p>Topic Title</p>
@@ -39,7 +39,7 @@
                     <br>
                     <br>
                     <input type="hidden" name="cid" value="<?php echo $cid; ?>" />
-                    <input type="submit" name="topic_submit" value="Create Your Topic" />
+                    <input type="submit" class="btn btn-primary" name="topic_submit" value="Create Your Topic" />
                   </form>
 
                 </div>
@@ -50,7 +50,7 @@
             </html>
 
           </div>
-
+	<button type="button" class="btn btn-primary" onclick="history.back();">Back</button>
         </div>
                                     <!--/.Panel 1-->
                                 </div>
@@ -64,9 +64,14 @@
 
                         <!--Card-->
                         <div class="card profile-card">
-
+				<div class="avatar z-depth-1-half mb-4">
+                                <img src="img/person.jpg" class="rounded-circle" alt="First sample avatar image">
+                            </div>
 
                             <div class="card-body pt-0 mt-0">
+                              <div class="avatar z-depth-1-half mb-4">
+                                <img src="img/person.jpg" class="rounded-circle" alt="First sample avatar image">
+                              </div>
                                 <!--Name-->
                                 <div class="text-center">
                                   <?php
@@ -85,7 +90,7 @@
                                     }
                                   }
                                   ?>
-                                    <h3 class="mb-3 font-weight-bold"><strong><?php echo $fname; echo " ".$lname; ?></strong></h3>
+                                    <h3 class="mb-3 font-weight-bold" style="color: Blue;"><strong><?php echo $fname; echo " ".$lname; ?></strong></h3>
 
                                 </div>
 

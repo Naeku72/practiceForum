@@ -22,8 +22,8 @@
                   while ($row2 = mysqli_fetch_assoc($res2)) {
                     echo "
                     <tr>
-                    <td valign='top'style='border: 1px solid #000000;'>
-                    <div style='min-height: 125px;'>".$row['topic_title']."<br />by".$row2['post_creator']." - ".$row2['post_date']."<hr />".$row2['post_content']."
+                    <td valign='top'style='border: 1px solid #8EDEF8;'>
+                    <div style='min-height: 125px;'>".$row['topic_title']."<br />by ".$row2['post_creator']." - ".$row2['post_date']."<hr />".$row2['post_content']."
                     </div>
                     </td>
 
@@ -43,6 +43,7 @@
               }
               echo "</table>";
               ?>
+		<button type="button" class="btn btn-primary" onclick="history.back();">Back</button>
             </div>
 
         </div>
@@ -78,7 +79,7 @@
                                   }
                                 }
                                 ?>
-                                  <h3 class="mb-3 font-weight-bold"><strong><?php echo $fname; echo " ".$lname; ?></strong></h3>
+                                  <h3 class="mb-3 font-weight-bold" style="color: Blue;"><strong><?php echo $fname; echo " ".$lname; ?></strong></h3>
 
                               </div>
 

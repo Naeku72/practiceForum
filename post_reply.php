@@ -1,5 +1,6 @@
 <?php require("head.php") ?>
 
+
         <!--Panel 1-->
         <div class="tab-pane fade active show" id="panel83" role="tabpanel">
 
@@ -47,7 +48,7 @@
                 return false;
               }
               </script>
-
+ 		<button type="button" class="btn btn-primary" onclick="history.back();">Back</button>
           </div>
 
         </div>
@@ -66,25 +67,42 @@
 
 
                             <div class="card-body pt-0 mt-0">
-                                <!--Name-->
-                                <div class="text-center">
-                                    <h3 class="mb-3 font-weight-bold"><strong>Anna Deynah</strong></h3>
-                                    <h6 class="font-weight-bold blue-text mb-4">Web Designer</h6>
-                                </div>
+                              <div class="avatar z-depth-1-half mb-4">
+                                <img src="img/person.jpg" class="rounded-circle" alt="First sample avatar image">
+                              </div>
+                              <!--Name-->
+                              <div class="text-center">
+                                <?php
+                                if( isset($_SESSION['uid']) )
+                                {
+                                  $sel = mysqli_query($con, "SELECT * FROM users WHERE id = $_SESSION[uid]
+                                  LIMIT 1 ");
+                                  while($a = mysqli_fetch_array($sel))
+                                  {
+                                    $uname = $a['username'];
+                                    $uemail = $a['email'];
+                                    $uphone = $a['phone'];
+                                    $fname = $a['fname'];
+                                    $lname = $a['lname'];
+                                  }
+                                }
+                                ?>
+                                  <h3 class="mb-3 font-weight-bold" style="color: Blue;"><strong><?php echo $fname; echo " ".$lname; ?></strong></h3>
 
-                                <ul class="striped list-unstyled">
-                                    <li><strong>E-mail address:</strong> a.doe@example.com</li>
+                              </div>
 
-                                    <li><strong>Phone number:</strong> +1 234 5678 90</li>
+                              <ul class="striped list-unstyled">
+                                  <li><strong>Username: </strong><?php echo $uname;   ?></li>
 
-                                    <li><strong>Company:</strong> The Company, Inc</li>
+                                  <li><strong>E-mail address: </strong><?php echo $uemail;   ?> </li>
 
-                                    <li><strong>Twitter username:</strong> @anna.doe</li>
+                                  <li><strong>Phone number: </strong> <?php echo $uphone;   ?></li>
 
-                                    <li><strong>Instagram username:</strong> @anna.doe</li>
-                                </ul>
 
-                            </div>
+
+                              </ul>
+
+                          </div>
 
                         </div>
                         <!--Card-->

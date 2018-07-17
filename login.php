@@ -21,10 +21,28 @@ if(isset($_POST['username'])){
   }
 }
 
+// if($){
+//   $username = $_POST['username'];
+//   $password = $_POST['password'];
+//   $sql = "SELECT * FROM admin WHERE username='".$username."' AND password='".$password."' LIMIT 1";
+//   $res = mysqli_query($con, $sql) or die(mysqli_error($con));
+//   if (mysqli_num_rows($res) == 1){
+//     $row = mysqli_fetch_assoc($res);
+//     $_SESSION['uid'] = $row['id'];
+//     $_SESSION['username'] = $row['username'];
+//     header("Location: admin.php?uid=$_SESSION[uid]");
+//     exit();
+//   }
+//   else{
+//     echo "Invalid Login credentials, Please return to log in page and try again &bull; <a href='login.php'>LogIn</a>";
+//     exit();
+//   }
+// }
+
  ?>
 
 <!DOCTYPE html>
-<!-- saved from url=(0081)https://mdbootstrap.com/previews/templates/admin-dashboard/html/pages/login.html# -->
+
 <html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <!-- Required meta tags always come first -->
 
@@ -134,7 +152,7 @@ if(isset($_POST['username'])){
 
         <nav class="navbar navbar-expand-lg navbar-dark fixed-top scrolling-navbar">
             <div class="container">
-                <a class="navbar-brand" href="Forum.html"><strong>Back to home</strong></a>
+                <a class="navbar-brand" href="index.html"><strong>Back to home</strong></a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-7" aria-controls="navbarSupportedContent-7" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>

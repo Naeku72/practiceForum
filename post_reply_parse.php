@@ -1,7 +1,7 @@
 <?php
 require("connect.php");
 
-    $creator = $_SESSION['uid'];
+    $creator = $_SESSION['username'];
     $cid = $_POST['cid'];
     $tid = $_POST['tid'];
     $reply_content = $_POST['reply_content'];

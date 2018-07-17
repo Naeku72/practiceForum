@@ -49,6 +49,10 @@
 
 
                             <div class="card-body pt-0 mt-0">
+                              <div class="avatar z-depth-1-half mb-4">
+                                <img src="img/person.jpg" class="rounded-circle" alt="First sample avatar image">
+                              </div>
+
                                 <!--Name-->
                                 <div class="text-center">
                                   <?php
@@ -66,7 +70,7 @@
                                     }
                                   }
                                   ?>
-                                    <h3 class="mb-3 font-weight-bold"><strong><?php echo $fname; echo " ".$lname; ?></strong></h3>
+                                    <h3 class="mb-3 font-weight-bold" style="color: Blue;"><strong><?php echo $fname; echo " ".$lname; ?></strong></h3>
 
                                 </div>
 
@@ -82,8 +86,15 @@
                                 </ul>
 
                             </div>
+                            <br>
+                            <h2 style="font-size: 1rem; padding-left: 10px;">Submit Any Complaints Below</h2>
+                            <textarea name="complaint_content" class='form-control' id='complaint' rows="5" cols="75" style="padding-left: 10px;"></textarea>
+                            <br>
+                            <input type="hidden" name="user_id" value="<?php $_SESSION['username']; ?>" />
+                            <a type="submit" name="complaint_submit" class='btn btn-primary' href="complaint.php" >Submit Complaint </a>
 
                         </div>
+
                         <!--Card-->
 
                     </div>

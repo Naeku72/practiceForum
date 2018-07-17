@@ -10,7 +10,7 @@ if (isset($_POST['topic_submit'])){
     $cid = $_POST['cid'];
     $title = $_POST['topic_title'];
     $content = $_POST['topic_content'];
-    $creator = $_SESSION['uid'];
+    $creator = $_SESSION['username'];
     $sql = "INSERT INTO topics(category_id, topic_title, topic_creator, topic_date, topic_reply_date) VALUES ('".$cid."', '".$title."', '".$creator."', now(), now() )";
     $res = mysqli_query($con, $sql) or die(mysqli_error());
     $new_topic_id = mysqli_insert_id($con);

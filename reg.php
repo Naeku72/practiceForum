@@ -1,10 +1,42 @@
-
 <?php
 
+$dbname = "test";
+                $con = mysqli_connect("localhost","root","",$dbname);
+
+		if(!$con){
+			die("Connection Failed :" + mysqli_connect_error());
+                }
+
+
+	
+		if(isset($_POST['username'])){
+		$fname = $_POST['fname'];
+		$lname = $_POST['lname'];
+		$username = $_POST['username'];
+		$email = $_POST['email'];
+		$phone = $_POST['phone'];
+		$password = $_POST['password'];
+		
 
 
 
- ?>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+?>
+
 
 <!DOCTYPE html>
 <html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -12,7 +44,7 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Register</title>
+    <title>Reg</title>
 
     <!-- Font Awesome -->
     <link rel="stylesheet" href="font-awesome.min.css">
@@ -145,8 +177,8 @@
                                     <input type="text" id="orangeForm-name" class="form-control" name='fname'>
                                     <label for="orangeForm-name">Your First Name</label>
                                 </div>
-
-                                <div class="md-form">
+				
+				<div class="md-form">
                                     <input type="text" id="orangeForm-name" class="form-control" name='lname'>
                                     <label for="orangeForm-name">Your Last Name</label>
                                 </div>
@@ -167,8 +199,8 @@
                                 </div>
 
                                 <div class="md-form">
-                                    <input type="text" id="orangeForm-name" class="form-control" name='password'>
-                                    <label for="orangeForm-pass">Your password</label>
+                                    <input type="password" id="orangeForm-pass" class="form-control" name='password'>
+                                    <label for="orangeForm-pass">Choose a Password</label>
                                 </div>
 
                                 <div class="text-center">

@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<!-- saved from url=(0084)https://mdbootstrap.com/previews/templates/admin-dashboard/html/pages/customers.html -->
+
 <html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Home</title>
+    <title>user</title>
     <!-- Font Awesome -->
     <link rel="stylesheet" href="font-awesome.min.css">
     <!-- Bootstrap core CSS -->
@@ -19,24 +19,24 @@
 <style type="text/css">/* Chart.js */
 @-webkit-keyframes chartjs-render-animation{from{opacity:0.99}to{opacity:1}}@keyframes chartjs-render-animation{from{opacity:0.99}to{opacity:1}}.chartjs-render-monitor{-webkit-animation:chartjs-render-animation 0.001s;animation:chartjs-render-animation 0.001s;}</style></head>
 
-<body class="fixed-sn white-skin">
+<body class="fixed-sn purple-gradient">
 
     <!--Main Navigation-->
     <header>
 
         <!-- Navbar -->
-        <nav class="navbar fixed-top navbar-expand-lg scrolling-navbar double-nav">
+        <nav class="navbar fixed-top navbar-expand-lg double-nav">
             <!-- SideNav slide-out button -->
             <!-- Breadcrumb-->
             <div class="breadcrumb-dn mr-auto">
-                <a href='user.php' class='btn btn-primary'>Home</a>
+                <a href='index.html' class='btn btn-primary'>Home</a>
             </div>
 
             <!--Navbar links-->
             <ul class="nav navbar-nav nav-flex-icons ml-auto">
 
               <li class="nav-item">
-                  <a class="nav-link waves-effect" href='admin.php'> <span class="clearfix d-none d-sm-inline-block">Admin</span></a>
+                  <a class="nav-link waves-effect" href='user.php'> <span class="clearfix d-none d-sm-inline-block">Categories</span></a>
               </li>
 
               <li class="nav-item">

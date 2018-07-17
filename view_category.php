@@ -18,18 +18,20 @@
             $sql2 = "SELECT * FROM topics WHERE category_id='".$cid."' ORDER BY topic_reply_date DESC";
             $res2 = mysqli_query($con, $sql2) or die(mysqli_error() );
 
+		$topics = "";
+
             if (mysqli_num_rows($res2) > 0) {
               $topics .= "<table width='100%' style='border-collapse: collapse;'>";
               $topics .= "<tr>
-              <td colspan='3'><a href='Forum.html'>Return To Home Page</a>".$logged."<hr />
+              <td colspan='3'><a href='user.php'>Return To Home Page</a>".$logged."<hr />
               </td>
               </tr>";
-              $topics .= "<tr style='background-color: #dddddd;'>
+              $topics .= "<tr style='background-color: #8EDEF8;;'>
               <td>Topic Title</td>
               <td width='65' align='center'>Views</td>
               </tr>";
               $topics .= "<tr>
-              <td colspan='3'><hr /></td>
+              <td colspan='3' ><hr /></td>
               </tr>";
 
               while ($row = mysqli_fetch_assoc($res2)){
@@ -39,7 +41,7 @@
                 $date = $row['topic_date'];
                 $creator = $row['topic_creator'];
                 $topics .= "<tr>
-                <td><a href='view_topic.php?cid=".$cid."&tid=".$tid."'>".$title."</a><br /><span class='post_info'>Posted by:".$creator." on ".$date."</span></td>
+                <td><a href='view_topic.php?cid=".$cid."&tid=".$tid."'>".$title."</a><br /><span class='post_info'>Posted by: ".$creator." on ".$date."</span></td>
                 <td align='center'>".$views."</td>
                 </tr>";
                 $topics .= "<tr>
@@ -50,7 +52,7 @@
               echo $topics;
             }
             else {
-              echo "<a href='index.php'> Return to Forum Home Page</a><hr />";
+              echo "<a href='user.php'> Return to Categories Page</a><hr />";
               echo "<p>There are no topics in this category yet.".$logged."</p>";
             }
           }else{
@@ -59,7 +61,7 @@
           }
            ?>
           </div>
-
+	<button type="button" class="btn btn-primary" onclick="history.back();">Back</button>
         </div>
                                     <!--/.Panel 1-->
                                 </div>
@@ -93,7 +95,7 @@
                                   }
                                 }
                                 ?>
-                                  <h3 class="mb-3 font-weight-bold"><strong><?php echo $fname; echo " ".$lname; ?></strong></h3>
+                                  <h3 class="mb-3 font-weight-bold" style="color: Blue;"><strong><?php echo $fname; echo " ".$lname; ?></strong></h3>
 
                               </div>
 

@@ -1,11 +1,4 @@
 
-<?php
-
-
-
-
- ?>
-
 <!DOCTYPE html>
 <html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <!-- Required meta tags always come first -->
@@ -139,35 +132,35 @@
                                 <div class="form-header purple-gradient">
                                     <h3> Create Account:</h3>
                                 </div>
-                                <form action='register.php' method='post'>
+                                <form action='register_parse.php' method='post'>
                                 <!--Body-->
                                 <div class="md-form">
-                                    <input type="text" id="orangeForm-name" class="form-control" name='fname'>
+                                    <input required="" type="text" id="orangeForm-name" class="form-control" name='fname'>
                                     <label for="orangeForm-name">Your First Name</label>
                                 </div>
 
                                 <div class="md-form">
-                                    <input type="text" id="orangeForm-name" class="form-control" name='lname'>
+                                    <input required="" type="text" id="orangeForm-name" class="form-control" name='lname'>
                                     <label for="orangeForm-name">Your Last Name</label>
                                 </div>
 
                                 <div class="md-form">
-                                    <input type="text" id="orangeForm-name" class="form-control" name='username'>
+                                    <input required="" type="text" id="orangeForm-name" class="form-control" name='username'>
                                     <label for="orangeForm-name">Your username</label>
                                 </div>
 
                                 <div class="md-form">
-                                    <input type="text" id="orangeForm-name" class="form-control" name='email'>
+                                    <input required="" type="text" id="orangeForm-name" class="form-control" name='email'>
                                     <label for="orangeForm-name">Your Email</label>
                                 </div>
 
                                 <div class="md-form">
-                                    <input type="text" id="orangeForm-name" class="form-control" name='phone'>
+                                    <input required="" type="text" id="orangeForm-name" class="form-control" name='phone'>
                                     <label for="orangeForm-name">Your phone number</label>
                                 </div>
 
                                 <div class="md-form">
-                                    <input type="text" id="orangeForm-name" class="form-control" name='password'>
+                                    <input required="" type="password" id="orangeForm-name" class="form-control" name='password'>
                                     <label for="orangeForm-pass">Your password</label>
                                 </div>
 

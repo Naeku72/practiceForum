@@ -6,17 +6,17 @@ include_once("connect.php");
 if(isset($_POST['username'])){
   $username = $_POST['username'];
   $password = $_POST['password'];
-  $sql = "SELECT * FROM users WHERE username='".$username."' AND password='".$password."' LIMIT 1";
+  $sql = "SELECT * FROM meme WHERE username='".$username."' AND password='".$password."' LIMIT 1";
   $res = mysqli_query($con, $sql) or die(mysqli_error($con));
   if (mysqli_num_rows($res) == 1){
     $row = mysqli_fetch_assoc($res);
     $_SESSION['uid'] = $row['id'];
     $_SESSION['username'] = $row['username'];
-    header("Location: user.php?uid=$_SESSION[uid]");
+    header("Location: admin.php?uid=$_SESSION[uid]");
     exit();
   }
   else{
-    echo "Invalid Login credentials, Please return to log in page and try again &bull; <a href='login.php'>LogIn</a>";
+    echo "Invalid Login credentials, Please return to the Admin log in page and try again &bull; <a href='adminlogin.php'>Log In</a>";
     exit();
   }
 }
@@ -31,7 +31,7 @@ if(isset($_POST['username'])){
 
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Login</title>
+    <title>Admin Login</title>
 
     <!-- Font Awesome -->
     <link rel="stylesheet" href="font-awesome.min.css">
@@ -155,18 +155,18 @@ if(isset($_POST['username'])){
 
                                 <!--Header-->
                                 <div class="form-header purple-gradient">
-                                    <h3> Log in:</h3>
+                                    <h3>Admin Log in:</h3>
                                 </div>
-                                <form action='login.php' method='post'>
+                                <form action='adminlogin.php' method='post'>
                                 <!--Body-->
                                 <div class="md-form">
                                     <input type="text" id="orangeForm-name" class="form-control" name='username'>
-                                    <label for="orangeForm-name">Your username</label>
+                                    <label for="orangeForm-name">Admin username</label>
                                 </div>
 
                                 <div class="md-form">
                                     <input type="password" id="orangeForm-pass" class="form-control" name='password'>
-                                    <label for="orangeForm-pass">Your password</label>
+                                    <label for="orangeForm-pass">Admin password</label>
                                 </div>
 
                                 <div class="text-center">

@@ -100,6 +100,36 @@ while($row = mysqli_fetch_array($sqldata, MYSQLI_ASSOC)){
      </tbody>
    </table>
 </div>
+<br><br>
+<div class="row wow fadeIn" style="visibility: visible; animation-name: fadeIn; margin: 10px;">
+  <h2 style="font-size: 1.5rem; color: Blue;">Table displaying User complaints in the system currently</h2>
+  <?php
+$sql = "SELECT * FROM complaints ";
+$sqldata = mysqli_query($con, $sql) or die("Error... Fetching Failed");
+   ?>
+   <table  class="table table-hover">
+     <tr  style="background-color: #008B8B;">
+       <th class="blue-grey lighten-4">Username</th>
+       <th class="blue-grey lighten-4">Complaint</th>
+       <th class="blue-grey lighten-4">Email</th>
+     </tr>
+     <tbody style="margin-left: 20px">
+       <?php
+while($row = mysqli_fetch_array($sqldata, MYSQLI_ASSOC)){
+  echo '<tr style="background-color: #C0C0C0;"><td>';
+  echo $row['username'];
+  echo '</td><td>';
+  echo $row['complaint'];
+  echo '</td><td>';
+  echo $row['user_email'];
+  echo '</td></tr>';
+}
+        ?>
+     </tbody>
+   </table>
+</div>
+
+
 
 <button type="button" class="btn btn-primary" onclick="history.back();">Back to Admin Page</button>
 <br><br><br><br>

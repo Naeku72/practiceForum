@@ -1,7 +1,5 @@
 <?php // require("head.php") ?>
 
-
-
 <!DOCTYPE html>
 
 <html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -40,11 +38,11 @@
             <ul class="nav navbar-nav nav-flex-icons ml-auto">
 
               <li class="nav-item">
-                  <a class="nav-link waves-effect" href='admin.php'> <span class="clearfix d-none d-sm-inline-block">Categories</span></a>
+                  <a class="nav-link waves-effect" href='catreport.php'> <span class="clearfix d-none d-sm-inline-block">Categories</span></a>
               </li>
 
               <li class="nav-item">
-                  <a class="nav-link waves-effect" href="logout_parse.php"> <span class="clearfix d-none d-sm-inline-block">Logout</span></a>
+                  <a class="nav-link waves-effect" href="adminlogin.php"> <span class="clearfix d-none d-sm-inline-block">Logout</span></a>
               </li>
 
             </ul>

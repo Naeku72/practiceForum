@@ -1,6 +1,5 @@
 <?php require("head.php") ?>
 
-
         <!--Panel 1-->
         <div class="tab-pane fade active show" id="panel83" role="tabpanel">
 
@@ -68,7 +67,7 @@
 
                             <div class="card-body pt-0 mt-0">
                               <div class="avatar z-depth-1-half mb-4">
-                                <img src="img/person.jpg" class="rounded-circle" alt="First sample avatar image">
+                                <img src="img/dp1.jpg" class="rounded-circle" alt="First sample avatar image">
                               </div>
                               <!--Name-->
                               <div class="text-center">
